@@ -1,0 +1,56 @@
+*{
+    margin:0px;
+    box-sizing:border-box;
+    padding:0px;
+}
+body{
+    background:rgb(98, 98, 98);
+}
+
+#slider{
+    height:600px;
+    width:800px;
+    margin:25px auto 0 auto;
+    overflow:hidden;
+    background:pink;
+    border:3px solid rgb(77, 77, 77);
+    border-radius:15px;
+}
+#wrapper{
+    height:600px;
+    width:9600px;
+    transition:1s;
+}
+#wrapper > img{
+    height:600px;
+    width:800px;
+    float:left;
+    font-size:100px;
+    color:black;
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+#clearfix{
+    clear:both;
+}
+#blue{
+    background:blue
+}
+#red{
+    background:red;
+}
+#green{
+    background:green;
+}
+#purple{
+    background:purple
+}
+#yellow{
+    background:yellow;
+}
+#grey{
+    background:grey;
+
+}
+
