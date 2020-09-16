@@ -1,18 +1,21 @@
 
 
 function autoSlider(){
-    setInterval(move,4000);
+    //Функция вызывающая функцию после ожидания 4 секунд после загрузки страницы
+    setInterval(move,4000); 
    
-    //Объявление переменных 
-    let sliderWrapper = document.getElementById('wrapper'); //Обертка слайдера для нажатия
-    let wrapperMarginLeft = 0; //изначальный отступ слайдера для обработки
+    //Получаем платформу слайдера - она будет двигаться влево тем самым изображения будут двигаться и отображаться в специальном блоке
+    let sliderWrapper = document.getElementById('wrapper');
+    //начальный отступ слайдера 
+    let wrapperMarginLeft = 0;  
 
-
-    //Функция вызываемая при событии
+    //Функция движения платформы слайдера вызываемая после ожидания 4 секунд
    function move(){
-    wrapperMarginLeft -= 800; //Перемещение обертки
-    sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px'; //присваеваем обертке изначальный отступ
-        
+    //Присваеваем переменной отступа обертки значение
+    wrapperMarginLeft -= 800;
+    //Инициализируем отступ для обертки 
+    sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px'; 
+    //Если отступ платформы больше 9600 = сбросить отступ до 0
     if(wrapperMarginLeft <= -9600){
             wrapperMarginLeft = 0;
             sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px';
@@ -25,19 +28,19 @@ autoSlider()
 /* Версия неавтоматизированного слайдера
 
 function sliderMove(){
-   
-    //Объявление переменных 
-    var sliderWrapper = document.getElementById('wrapper'); //Обертка слайдера для нажатия
-    var wrapperMarginLeft = 0; //изначальный отступ слайдера для обработки
-   
-    //Объявление обработчика события
-   sliderWrapper.onclick = move; //при нажатии на обертку слайдера происходит вызов функции move 
+    //Платформа слайдера на которой лежат изображения
+    var sliderWrapper = document.getElementById('wrapper');
+    //Изначальный отступ платформы 
+    var wrapperMarginLeft = 0; 
+    Обработчик события = при клике на картинку вызывать функцию движения платформы.
+   sliderWrapper.onclick = move; 
 
-    //Функция вызываемая при событии
    function move(){
-    wrapperMarginLeft -= 800; //Перемещение обертки
-
-    sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px'; //присваеваем обертке изначальный отступ
+    //Присваеваем переменной отступа платформы значение
+    wrapperMarginLeft -= 800; 
+    //Инициализируем отступ платформы
+    sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px';
+     //Если отступ платформы больше 9600 = сбросить отступ до 0
         if(wrapperMarginLeft < -9600){
             wrapperMarginLeft = 0;
             sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px';
