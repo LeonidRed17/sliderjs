@@ -1,7 +1,13 @@
+//08.08.2020 Слайдер из 6 элементов с плавным переходом.
 
-//Слайдер двигается автоматический
+//Написать версию где вместо блоков будут настоящие изображения.
+
+//написать версию где слайдер будет двигаться по истечению какого-либо времени.
+
+
+
 function autoSlider(){
-    setInterval(move,2000);
+    setInterval(move,4000);
    
     //Объявление переменных 
     let sliderWrapper = document.getElementById('wrapper'); //Обертка слайдера для нажатия
@@ -22,8 +28,8 @@ function autoSlider(){
     }
 }    
 autoSlider()
-/*
-//Написать новую версию где вместо движения 1 объекта двигается сразу 3.
+
+/* Версия неавтоматизированного слайдера
 
 function sliderMove(){
    
@@ -36,34 +42,10 @@ function sliderMove(){
 
     //Функция вызываемая при событии
    function move(){
-    wrapperMarginLeft -= 498; //Перемещение обертки
+    wrapperMarginLeft -= 800; //Перемещение обертки
 
     sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px'; //присваеваем обертке изначальный отступ
-        if(wrapperMarginLeft < -498){
-            wrapperMarginLeft = 0;
-            sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px';
-        }
-    }
-}    
-
-//sliderMove();
-
-/* движение 1 слайда.
-function sliderMove(){
-   
-    //Объявление переменных 
-    var sliderWrapper = document.getElementById('wrapper'); //Обертка слайдера для нажатия
-    var wrapperMarginLeft = 0; //изначальный отступ слайдера для обработки
-   
-    //Объявление обработчика события
-   sliderWrapper.onclick = move; //при нажатии на обертку слайдера происходит вызов функции move 
-
-    //Функция вызываемая при событии
-   function move(){
-    wrapperMarginLeft -= 166; //Перемещение обертки
-
-    sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px'; //присваеваем обертке изначальный отступ
-        if(wrapperMarginLeft < -498){
+        if(wrapperMarginLeft < -9600){
             wrapperMarginLeft = 0;
             sliderWrapper.style.marginLeft = wrapperMarginLeft + 'px';
         }
@@ -71,5 +53,4 @@ function sliderMove(){
 }    
 
 sliderMove();
-
 */
